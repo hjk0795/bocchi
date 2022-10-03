@@ -1,0 +1,26 @@
+body {
+  text-align: center;
+  background-image: url(./images/45-degree-fabric-light.png);
+}
+
+.mainContainer {
+  margin-top: 300px;
+}
+
+.circle {
+  border: 1px solid black;
+  height: 200px;
+  border-radius: 50%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  width: 200px;
+  line-height: 200px;
+  display: inline-block;
+  background-color: transparent;
+}
+
+.categoryContainer {
+    margin-top: 100px;
+    background-color: transparent;
+    padding: 0 200px;
+}
