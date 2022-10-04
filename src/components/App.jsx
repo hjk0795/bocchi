@@ -6,6 +6,7 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
+import RestaurantList from "../pages/RestaurantList";
 
 function App() {
   const router = createBrowserRouter([
@@ -19,11 +20,11 @@ function App() {
     },
     {
       path: "/category",
-      element: (
-        <div>
-          <Category />
-        </div>
-      ),
+      element: <Category />
+    },
+    {
+      path: "category/:categoryName",
+      element: <RestaurantList />,
     },
   ]);
 

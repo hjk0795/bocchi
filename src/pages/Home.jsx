@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 function Home() {
   return (
     <div className="mainContainer">
@@ -5,13 +7,10 @@ function Home() {
         The elegant act of eating food <br /> without being disturbed by anyone
       </h1>
       <div className="d-grid gap-2 col-1 mx-auto">
-        <form action="/category" method="post">
-          <button type="submit" className="btn btn-outline-dark btn-lg">
-          Start
-          </button>
-        </form>
+        <button type="button" className="btn btn-outline-dark btn-lg">
+          <Link to="/category">Start</Link>
+        </button>
       </div>
-
     </div>
   );
 }
