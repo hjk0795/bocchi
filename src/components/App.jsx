@@ -1,12 +1,11 @@
 import React from "react";
 import Header from "./Header";
-import Home from "../pages/Home";
-import Category from "../pages/Category";
-import {
-  createBrowserRouter,
-  RouterProvider,
-} from "react-router-dom";
-import RestaurantList from "../pages/RestaurantList";
+import Home from "../routes/home";
+import Category from "../routes/category";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import RestaurantList from "../routes/restaurantList";
+import ErrorPage from "../routes/error";
+import LogInPage from "../routes/log-in-page";
 
 function App() {
   const router = createBrowserRouter([
@@ -17,20 +16,36 @@ function App() {
           <Home />
         </div>
       ),
+      errorElement: <ErrorPage />,
     },
     {
       path: "/category",
-      element: <Category />
+      element: (
+        <div>
+          <Category />
+        </div>
+      ),
     },
     {
       path: "category/:categoryName",
-      element: <RestaurantList />,
+      element: (
+        <div>
+          <RestaurantList />
+        </div>
+      ),
+    },
+    {
+      path: "/login",
+      element: (
+        <div>
+          <LogInPage />
+        </div>
+      ),
     },
   ]);
 
   return (
     <div>
-      <Header />
       <RouterProvider router={router} />
     </div>
   );

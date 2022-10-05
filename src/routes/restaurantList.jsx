@@ -1,6 +1,8 @@
+import { rest } from "lodash";
 import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 import List from "../components/List";
+import Header from "../components/Header";
 
 function RestaurantList() {
   const params = useParams();
@@ -14,9 +16,11 @@ function RestaurantList() {
   }, [params]);
 
   return (
-    restaurantList.map((restaurant, index)=>{
+    <>
+      <Header />
+      {restaurantList.map((restaurant, index) => {
         return (
-            <List
+          <List
             key={index}
             brandImg={restaurant.brandImg}
             name={restaurant.name}
@@ -26,10 +30,10 @@ function RestaurantList() {
             location={restaurant.location}
             menuImg={restaurant.menuImg}
             openingHours={restaurant.openingHours}
-             />
+          />
         );
-    })
-
+      })}
+    </>
   );
 }
 

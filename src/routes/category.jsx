@@ -6,6 +6,7 @@ import Paper from "@mui/material/Paper";
 import Grid from "@mui/material/Grid";
 import { Link } from "react-router-dom";
 import _ from "lodash";
+import Header from "../components/Header";
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
@@ -20,6 +21,8 @@ function Category() {
   var categoryList = ["Sushi", "Donburi", "Ramen", "Burger"];
 
   return (
+    <>
+    <Header />
     <div className="categoryContainer">
       <Box sx={{ flexGrow: 1 }}>
         <Grid container spacing={15}>
@@ -40,6 +43,7 @@ function Category() {
         </Grid>
       </Box>
     </div>
+    </>
   );
 }
 
