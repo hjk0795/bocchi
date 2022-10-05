@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 import List from "../components/List";
 
@@ -23,6 +23,9 @@ function RestaurantList() {
             star={restaurant.star}
             reviewStatement={restaurant.reviewStatement}
             foodImg={restaurant.foodImg}
+            location={restaurant.location}
+            menuImg={restaurant.menuImg}
+            openingHours={restaurant.openingHours}
              />
         );
     })
