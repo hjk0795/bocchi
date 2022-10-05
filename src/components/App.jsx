@@ -1,5 +1,4 @@
 import React from "react";
-import Header from "./Header";
 import Home from "../routes/home";
 import Category from "../routes/category";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
@@ -8,6 +7,7 @@ import ErrorPage from "../routes/error";
 import LogInPage from "../routes/log-in-page";
 
 function App() {
+
   const router = createBrowserRouter([
     {
       path: "/",

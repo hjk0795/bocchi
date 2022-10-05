@@ -131,7 +131,6 @@ app.get("/category/:categoryName", function(req, res) {
 
     }
 
-    console.log(resultList);
     res.json(resultList);
 });
 
